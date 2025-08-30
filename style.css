@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background: url('https://i.pinimg.com/originals/de/e7/85/dee7851208617e0febcb569fd10ded72.gif') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1035.cur'), auto;
+}
+
+.profile {
+    margin-top: 60px;
+    text-align: center;
+}
+
+    .profile img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    }
+
+    .profile h1 {
+        margin: 15px 0 5px;
+        font-size: 28px;
+        text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+
+    .profile p {
+        margin: 0;
+        font-size: 14px;
+        opacity: 0.9;
+    }
+
+.social-icons {
+    margin: 20px 0;
+}
+
+    .social-icons a {
+        color: #fff;
+        font-size: 22px;
+        margin: 0 10px;
+        text-decoration: none;
+        transition: transform 0.2s, color 0.3s;
+    }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #ff4081; /* cor de destaque no hover */
+        }
+
+.links {
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.link-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px); /* efeito glass */
+    padding: 15px 20px;
+    border-radius: 25px; /* cantos arredondados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+    .link-button i {
+        margin-right: 12px;
+        font-size: 20px;
+    }
+
+    .link-button:hover {
+        background: rgba(255, 64, 129, 0.3);
+        border-color: #ff4081;
+        box-shadow: 0 0 15px rgba(255,64,129,0.6);
+        transform: translateY(-2px);
+    }
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

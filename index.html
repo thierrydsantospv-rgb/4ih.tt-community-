@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>4ih.tt - Redes Oficiais</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/b2/c4/69/b2c46907798def8a6859d19c46d37b27.jpg" />
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Fonte Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            background: url('https://i.pinimg.com/originals/de/e7/85/dee7851208617e0febcb569fd10ded72.gif') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1035.cur'), auto;
+        }
+
+        .profile {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+            .profile img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                border: 3px solid #fff;
+                box-shadow: 0 0 20px rgba(255,255,255,0.4);
+            }
+
+            .profile h1 {
+                margin: 15px 0 5px;
+                font-size: 28px;
+                text-shadow: 0 0 10px rgba(0,0,0,0.7);
+            }
+
+            .profile p {
+                margin: 0;
+                font-size: 14px;
+                opacity: 0.9;
+            }
+
+        .social-icons {
+            margin: 20px 0;
+        }
+
+            .social-icons a {
+                color: #fff;
+                font-size: 24px;
+                margin: 0 12px;
+                text-decoration: none;
+                transition: transform 0.2s, color 0.3s;
+            }
+
+                .social-icons a:hover {
+                    transform: scale(1.2);
+                    color: #ff4081;
+                }
+
+        .links {
+            width: 90%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .link-button {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(6px);
+            padding: 15px 20px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+            .link-button i {
+                margin-right: 12px;
+                font-size: 20px;
+            }
+
+            .link-button:hover {
+                background: rgba(255, 64, 129, 0.3);
+                border-color: #ff4081;
+                box-shadow: 0 0 15px rgba(255,64,129,0.6);
+                transform: translateY(-2px);
+            }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile fade-in">
+        <img src="https://i.pinimg.com/736x/b2/c4/69/b2c46907798def8a6859d19c46d37b27.jpg" alt="Ícone Código" />
+        <h1>community baxones</h1>
+        <p>Conecte-se nas redes oficiais baxones1</p>
+
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@4ih.tt" target="_blank" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/4ih.tt/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://discord.gg/NM8qNghrBt" target="_blank" title="Discord">
+                <i class="fab fa-discord"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="links fade-in">
+        <a class="link-button" href="https://discord.gg/NM8qNghrBt" target="_blank">
+            <i class="fab fa-discord"></i> Entrar no Discord
+        </a>
+        <a class="link-button" href="https://www.tiktok.com/@4ih.tt" target="_blank">
+            <i class="fab fa-tiktok"></i> TikTok Oficial
+        </a>
+        <a class="link-button" href="https://www.instagram.com/4ih.tt/" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram Oficial
+        </a>
+    </div>
+
+    <!-- Música ambiente -->
+    <audio id="bg-music" autoplay loop muted preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2021/11/02/audio_29bb317b8c.mp3?filename=lofi-chill-11343.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Script V1 -->
+    <script>
+        const clickSound = new Audio('https://freesound.org/data/previews/256/256113_3263906-lq.mp3');
+        clickSound.volume = 0.2;
+
+        document.querySelectorAll('.link-button').forEach(button => {
+            button.addEventListener('click', () => {
+                clickSound.currentTime = 0;
+                clickSound.play();
+
+                console.log(`Você clicou no link: ${button.textContent.trim()}`);
+            });
+        });
+
+        const bgMusic = document.getElementById('bg-music');
+        document.querySelectorAll('.link-button').forEach(button => {
+            button.addEventListener('click', () => {
+                if (bgMusic.muted) {
+                    bgMusic.muted = false;
+                    bgMusic.play();
+                }
+            }, { once: true });
+        });
+    </script>
+
+</body>
+</html>
