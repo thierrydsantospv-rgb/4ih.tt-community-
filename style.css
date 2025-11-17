@@ -1,49 +1,66 @@
 body {
-    background: #0d0d0d;
+    background: #050505;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
 .title {
-    margin-top: 40px;
-    font-size: 34px;
-    color: white;
-    text-shadow: 0 0 15px #6a5acd, 0 0 30px #8a2be2;
+    margin-top: 35px;
+    font-size: 26px;
+    line-height: 32px;
+    text-shadow: 0 0 10px #b700ff, 0 0 20px #6100ff;
+}
+
+.subtitle {
+    margin-top: 30px;
+    font-size: 22px;
+    text-shadow: 0 0 10px #9d4bff;
 }
 
 .container {
-    margin-top: 60px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    align-items: center;
+    gap: 15px;
+    padding: 0 20px;
 }
 
 .btn {
-    width: 280px;
-    padding: 15px;
-    border-radius: 12px;
-    font-size: 18px;
+    background: #0e0e0e;
+    padding: 13px;
+    border-radius: 10px;
     color: white;
     text-decoration: none;
-    background: #111;
-    box-shadow: 0 0 10px #6a5acd;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
     transition: 0.2s;
 }
 
-.btn:hover {
-    box-shadow: 0 0 20px #8a2be2;
-    transform: scale(1.03);
+.neon {
+    border: 1px solid #9d4bff;
+    box-shadow: 0 0 10px #8a2be2;
 }
 
-.neon {
-    border: 1px solid #8a2be2;
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 18px #ba63ff;
+}
+
+.small {
+    margin-top: 10px;
+    font-size: 15px;
 }
 
 .form-box {
-    margin-top: 40px;
-    width: 300px;
+    margin-top: 25px;
+    width: 90%;
+    max-width: 280px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -52,15 +69,15 @@ body {
     width: 100%;
     padding: 12px;
     margin-bottom: 12px;
+    background: #151515;
+    border: 1px solid #5e2cff;
     border-radius: 8px;
-    border: none;
-    outline: none;
-    background: #1a1a1a;
     color: white;
+    outline: none;
 }
 
 .status {
-    margin-top: 15px;
-    font-size: 18px;
+    margin-top: 12px;
+    font-size: 15px;
     text-shadow: 0 0 10px #6a5acd;
 }

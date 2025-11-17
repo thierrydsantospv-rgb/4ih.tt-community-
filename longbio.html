@@ -2,22 +2,19 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atualizar Long Bio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1 class="title">Atualizar LONG BIO</h1>
+<h2 class="subtitle">Atualizar LONG BIO</h2>
 
 <div class="form-box">
-
     <input id="token" class="input" placeholder="ACCESS TOKEN">
     <input id="bio" class="input" placeholder="NOVA BIO">
-
-    <button onclick="sendBio()" class="btn neon">ATUALIZAR</button>
-
+    <button onclick="sendBio()" class="btn neon small">ATUALIZAR</button>
     <p id="status" class="status"></p>
-
 </div>
 
 <script>
@@ -26,20 +23,15 @@ function sendBio() {
     let bio = document.getElementById("bio").value;
 
     if (!token || !bio) {
-        document.getElementById("status").innerHTML = "Preencha tudo!";
+        document.getElementById("status").innerHTML = "Preencha todos os campos!";
         return;
     }
 
     let url = `https://bio.thug4ff.com/update_bio?access_token=${token}&bio=${bio}&key=nexx`;
 
     fetch(url)
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("status").innerHTML = "✅ SUCESSO — STATUS ONLINE";
-        })
-        .catch(err => {
-            document.getElementById("status").innerHTML = "❌ ERRO — TENTE NOVAMENTE";
-        });
+        .then(() => document.getElementById("status").innerHTML = "✅ BIO ATUALIZADA COM SUCESSO!")
+        .catch(() => document.getElementById("status").innerHTML = "❌ ERRO AO ATUALIZAR.");
 }
 </script>
 

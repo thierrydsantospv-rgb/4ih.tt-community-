@@ -2,21 +2,18 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Remove All Friends</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1 class="title">REMOVE ALL FRIENDS</h1>
+<h2 class="subtitle">REMOVE ALL FRIENDS</h2>
 
 <div class="form-box">
-
     <input id="token" class="input" placeholder="ACCESS TOKEN">
-
-    <button onclick="removeFriends()" class="btn neon">REMOVER</button>
-
+    <button onclick="removeFriends()" class="btn neon small">REMOVER</button>
     <p id="status" class="status"></p>
-
 </div>
 
 <script>
@@ -24,20 +21,15 @@ function removeFriends() {
     let token = document.getElementById("token").value;
 
     if (!token) {
-        document.getElementById("status").innerHTML = "Preencha o Token!";
+        document.getElementById("status").innerHTML = "Insira o token!";
         return;
     }
 
     let url = `https://controle.thug4ff.com/remove_all?access_token=${token}`;
 
     fetch(url)
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("status").innerHTML = "✅ SUCESSO — STATUS ONLINE";
-        })
-        .catch(err => {
-            document.getElementById("status").innerHTML = "❌ ERRO — TENTE NOVAMENTE";
-        });
+        .then(() => document.getElementById("status").innerHTML = "✅ AMIGOS REMOVIDOS COM SUCESSO!")
+        .catch(() => document.getElementById("status").innerHTML = "❌ ERRO AO REMOVER.");
 }
 </script>
 
