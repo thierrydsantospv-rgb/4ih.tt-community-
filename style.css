@@ -1,87 +1,66 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
     background: #0d0d0d;
-    color: #fff;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
-header {
-    text-align: center;
-    padding: 25px 10px;
-    background: #111;
-    border-bottom: 2px solid #333;
-}
-
-.hero {
-    text-align: center;
-    padding: 25px;
-    background: #181818;
-    border-bottom: 2px solid #222;
+.title {
+    margin-top: 40px;
+    font-size: 34px;
+    color: white;
+    text-shadow: 0 0 15px #6a5acd, 0 0 30px #8a2be2;
 }
 
 .container {
-    max-width: 600px;
-    margin: 30px auto;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    align-items: center;
 }
 
-.card {
-    background: #1c1c1c;
-    padding: 20px;
-    border-radius: 14px;
+.btn {
+    width: 280px;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 18px;
+    color: white;
     text-decoration: none;
-    color: #fff;
-    transition: 0.3s;
+    background: #111;
+    box-shadow: 0 0 10px #6a5acd;
+    transition: 0.2s;
 }
 
-.card:hover {
-    background: #262626;
+.btn:hover {
+    box-shadow: 0 0 20px #8a2be2;
+    transform: scale(1.03);
 }
 
-.danger {
-    border-left: 4px solid #ff3b3b;
+.neon {
+    border: 1px solid #8a2be2;
 }
 
 .form-box {
-    max-width: 450px;
-    margin: 40px auto;
-    padding: 20px;
+    margin-top: 40px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-input {
+.input {
     width: 100%;
     padding: 12px;
-    margin-top: 10px;
+    margin-bottom: 12px;
     border-radius: 8px;
     border: none;
-}
-
-button {
-    width: 100%;
-    padding: 13px;
-    margin-top: 15px;
-    background: #0077ff;
-    border: none;
-    border-radius: 10px;
+    outline: none;
+    background: #1a1a1a;
     color: white;
-    font-weight: bold;
-    cursor: pointer;
 }
 
-button:hover {
-    opacity: 0.8;
-}
-
-button.danger {
-    background: #ff3b3b;
-}
-
-.result {
+.status {
     margin-top: 15px;
-    padding: 10px;
-    background: #222;
-    border-radius: 10px;
-    text-align: center;
+    font-size: 18px;
+    text-shadow: 0 0 10px #6a5acd;
 }
